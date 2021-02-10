@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/chatbot-style.css">
+    <script type="text/javascript" src="scripts/apiGateway-js-sdk/lib/axios/dist/axios.standalone.js"></script>
+    <script type="text/javascript" src="scripts/apiGateway-js-sdk/lib/CryptoJS/rollups/hmac-sha256.js"></script>
+    <script type="text/javascript" src="scripts/apiGateway-js-sdk/lib/CryptoJS/rollups/sha256.js"></script>
+    <script type="text/javascript" src="scripts/apiGateway-js-sdk/lib/CryptoJS/components/hmac.js"></script>
+    <script type="text/javascript" src="scripts/apiGateway-js-sdk/lib/CryptoJS/components/enc-base64.js"></script>
+    <script type="text/javascript" src="scripts/apiGateway-js-sdk/lib/url-template/url-template.js"></script>
+    <script type="text/javascript" src="scripts/apiGateway-js-sdk/lib/apiGatewayCore/sigV4Client.js"></script>
+    <script type="text/javascript" src="scripts/apiGateway-js-sdk/lib/apiGatewayCore/apiGatewayClient.js"></script>
+    <script type="text/javascript" src="scripts/apiGateway-js-sdk/lib/apiGatewayCore/simpleHttpClient.js"></script>
+    <script type="text/javascript" src="scripts/apiGateway-js-sdk/lib/apiGatewayCore/utils.js"></script>
+    <script type="text/javascript" src="scripts/apiGateway-js-sdk/apigClient.js"></script>
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.283.1.min.js"></script>
+    <script type="text/javascript" src="scripts/chatbot-script.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1 align="center">CHATBOT</h1>
+      <hr>
+      <div id="chat-output">
+      </div>
+      <div class="chat-input-box">
+        <form>
+          <input type="text" id="user-input-text" placeholder="Talk to the bot">
+          <button id="user-input-button" onclick="return callChatbotLambda()">SEND</button>
+        </form>
+      </div>
+      <br>
+    </div>
+  </body>
+</html>
